@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "TB_PAKING_SPOT")
-public class PakingSpotModel implements Serializable{
+public class ParkingSpotModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -39,10 +39,10 @@ public class PakingSpotModel implements Serializable{
 	@Column(nullable = false, length = 30)
 	private String block;
 	
-	public PakingSpotModel() {
+	public ParkingSpotModel() {
 	}
 
-	public PakingSpotModel(UUID id, String parkingSportNumber, String licensePlateCar, String brandCar, String modelCar,
+	public ParkingSpotModel(UUID id, String parkingSportNumber, String licensePlateCar, String brandCar, String modelCar,
 			String colorCar, LocalDateTime registrationDate, String responsibleName, String apartment, String block) {
 		super();
 		this.id = id;
@@ -150,7 +150,7 @@ public class PakingSpotModel implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		PakingSpotModel other = (PakingSpotModel) obj;
+		ParkingSpotModel other = (ParkingSpotModel) obj;
 		return Objects.equals(id, other.id);
 	}
 	
